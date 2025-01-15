@@ -9,17 +9,21 @@ html{
     overflow-x:hidden;
 }
 
-.freeCodeCamp-icon{
-    display:block;
-    width:270px;
-    height:220px;
-    margin: 50px auto 30px auto;
-    
 
-
-
-}
 
 body{
     background-color:black;
 }
+
+h1{
+    color: white;
+    text-align:center;
+}
+
+.freeCodeCamp-icon{
+    display:block;
+    width:270px;
+    margin: 150px auto 30px auto;
+    
+}
+
