@@ -5,7 +5,16 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+html{
+    overflow-x:hidden;
+}
+
 .freeCodeCamp-icon{
+    display:block;
+    width:270px;
+    height:220px;
+    margin: 50px auto 30px auto;
+    
 
 
 
