@@ -21,13 +21,16 @@ const isPalindrome = (word) => {
 };
 
 const result = (word) => {
-  const result = document.getElementById("result");
+  const result = document.getElementById("results");
   if (result) {
     result.remove();
   }
+  else{
+    alert("Please input a value")
+  }
 
   const resultElement = document.createElement("p");
-  resultElement.setAttribute("id", "result");
+  resultElement.setAttribute("id", "results");
   resultElement.setAttribute("class", "result");
   const textResult = isPalindrome(word)
     ? `${word} is a Palindrome.`
