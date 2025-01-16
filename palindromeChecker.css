@@ -82,6 +82,7 @@ h1{
     border: none;
 }
 
+
 .text-container{
     display: inline-block;
     
@@ -89,3 +90,10 @@ h1{
     
 }
 
+.result{
+    font-size: x-large;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+}
