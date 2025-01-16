@@ -30,18 +30,18 @@ const isPalindrome = (word) =>
 
 
 const result = (word) =>{
-    debugger;
+    const result = document.getElementById("result")
+    if(result){
+        result.remove()
+    }
+
     const resultElement = document.createElement("p")
-    console.log(resultElement)
-
+    resultElement.setAttribute("id","result")
     const textResult =  isPalindrome(word) ? `${word} is a Palindrome.` : `${word} is not a Palindrome.`
-
-
     resultElement.textContent = textResult;
-
     checkBox.appendChild(resultElement)
 
-    return resultElement
+    
 
 
 
