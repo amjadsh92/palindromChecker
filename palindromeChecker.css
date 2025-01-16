@@ -77,7 +77,8 @@
     align-content: end;
   }
   
-  .results {
+  .result {
+    display:none;
     font-size: x-large;
     width: 90%;
     margin-left: auto;

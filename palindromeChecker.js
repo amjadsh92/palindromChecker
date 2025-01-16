@@ -9,9 +9,9 @@ const isPalindrome = (word) => {
   word = word.toLowerCase();
   word = word.replace(regex, "");
 
-  let max = word.length - 1;
+  let max = word.length -1  ;
 
-  for (let i = 0; i < Math.floor(max / 2); i++) {
+  for (let i = 0; i < Math.floor(max / 2 + 1); i++) {
     if (word[i] !== word[max - i]) {
       return false;
     }
@@ -21,10 +21,7 @@ const isPalindrome = (word) => {
 };
 
 const result = (word) => {
-  const result = document.getElementById("results");
-  if (result) {
-    result.remove();
-  }
+  
   
 
   if(word === ""){
@@ -35,9 +32,9 @@ const result = (word) => {
 
   
 
-  const resultElement = document.createElement("p");
-  resultElement.setAttribute("id", "results");
-  resultElement.setAttribute("class", "results");
+  const resultElement = document.getElementById("result")
+  resultElement.style.display="block";
+  
   const textResult = isPalindrome(word)
     ? `${word} is a Palindrome.`
     : `${word} is not a Palindrome.`;
