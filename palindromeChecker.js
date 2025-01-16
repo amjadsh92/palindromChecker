@@ -10,7 +10,7 @@ checkButton.addEventListener("click",() => result(inputWord.value))
 const isPalindrome = (word) => 
 
     {
-         const regex = /\s/g;
+         const regex = /[^a-zA-Z0-9]/g;
          word = word.toLowerCase()
          word = word.replace(regex,"")       
 
@@ -48,3 +48,4 @@ const result = (word) =>{
 
 
 }
+
