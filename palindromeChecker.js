@@ -1,3 +1,12 @@
+const checkBox = document.getElementById("check-box")
+const checkButton = document.getElementById("check-btn")
+const inputWord = document.getElementById("text-input")
+
+
+checkButton.addEventListener("click",() => result(inputWord.value))
+
+
+
 const isPalindrome = (word) => 
 
     {
@@ -14,5 +23,27 @@ const isPalindrome = (word) =>
         }
 
         return true
+
+
     }
 
+
+
+const result = (word) =>{
+    debugger;
+    const resultElement = document.createElement("p")
+    console.log(resultElement)
+
+    const textResult =  isPalindrome(word) ? `${word} is a Palindrome.` : `${word} is not a Palindrome.`
+
+
+    resultElement.textContent = textResult;
+
+    checkBox.appendChild(resultElement)
+
+    return resultElement
+
+
+
+
+}
