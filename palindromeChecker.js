@@ -1,51 +1,37 @@
-const checkBox = document.getElementById("check-box")
-const checkButton = document.getElementById("check-btn")
-const inputWord = document.getElementById("text-input")
+const checkBox = document.getElementById("check-box");
+const checkButton = document.getElementById("check-btn");
+const inputWord = document.getElementById("text-input");
 
+checkButton.addEventListener("click", () => result(inputWord.value));
 
-checkButton.addEventListener("click",() => result(inputWord.value))
+const isPalindrome = (word) => {
+  const regex = /[^a-zA-Z0-9]/g;
+  word = word.toLowerCase();
+  word = word.replace(regex, "");
 
+  let max = word.length - 1;
 
-
-const isPalindrome = (word) => 
-
-    {
-         const regex = /[^a-zA-Z0-9]/g;
-         word = word.toLowerCase()
-         word = word.replace(regex,"")       
-
-         let max = word.length -1
-
-        for(let i = 0; i < Math.floor(max / 2); i++){
-            if (word[i] !== word[max -i]){
-                return false
-            }
-        }
-
-        return true
-
-
+  for (let i = 0; i < Math.floor(max / 2); i++) {
+    if (word[i] !== word[max - i]) {
+      return false;
     }
+  }
 
+  return true;
+};
 
+const result = (word) => {
+  const result = document.getElementById("result");
+  if (result) {
+    result.remove();
+  }
 
-const result = (word) =>{
-    const result = document.getElementById("result")
-    if(result){
-        result.remove()
-    }
-
-    const resultElement = document.createElement("p")
-    resultElement.setAttribute("id","result")
-    resultElement.setAttribute("class", "result")
-    const textResult =  isPalindrome(word) ? `${word} is a Palindrome.` : `${word} is not a Palindrome.`
-    resultElement.textContent = textResult;
-    checkBox.appendChild(resultElement)
-
-    
-
-
-
-
-}
-
+  const resultElement = document.createElement("p");
+  resultElement.setAttribute("id", "result");
+  resultElement.setAttribute("class", "result");
+  const textResult = isPalindrome(word)
+    ? `${word} is a Palindrome.`
+    : `${word} is not a Palindrome.`;
+  resultElement.textContent = textResult;
+  checkBox.appendChild(resultElement);
+};

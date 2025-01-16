@@ -1,54 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Palindrome Checker</title>
-        <link rel="stylesheet" href="palindromeChecker.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link rel="stylesheet" href="palindromeChecker.css" />
+  </head>
 
-    </head>
+  <body>
+    <main>
+      <img
+        id="freeCodeCamp-icon"
+        class="freeCodeCamp-icon"
+        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+        alt="freeCodeCamp Logo"
+      />
 
-    <body>
+      <h1>Is it a Palindrome ?</h1>
+      <div id="check-box" class="check-box">
+        <p>Enter in text to check for a palindrome:</p>
+        <div class="check">
+          <div class="text-container">
+            <input type="text" id="text-input" class="text-input" />
+            <div class="border"></div>
+          </div>
 
-        <main>
+          <button id="check-btn" class="check-btn">Check</button>
+        </div>
+      </div>
 
-            <img id="freeCodeCamp-icon" class="freeCodeCamp-icon" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp Logo">
-
-            <h1> Is it a Palindrome ?</h1> 
-            <div id="check-box" class="check-box">
-                <p>Enter in text to check for a palindrome:</p>
-                <div class="check">
-                   <div class="text-container">
-                    <input type="text" id="text-input" class="text-input">
-                    <div class="border"></div>
-                   </div>
-                  
-                   <button id="check-btn" class= "check-btn">Check</button>
-
-         
-                </div>
-
-
-            </div>
-
-            
-                
-
-         
-            <div id="note" class="note">
-            <span>💡</span>
-            <p> A <i>palindrome</i> is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
-         
-
-            </div>
-
-        
-
-
-        </main>
-     <script src="palindromeChecker.js"></script>
-    </body>
-
-
-
+      <div id="note" class="note">
+        <span>💡</span>
+        <p>
+          A <i>palindrome</i> is a word or sentence that's spelled the same way
+          both forward and backward, ignoring punctuation, case, and spacing.
+        </p>
+      </div>
+    </main>
+    <script src="palindromeChecker.js"></script>
+  </body>
 </html>
