@@ -37,6 +37,7 @@ const result = (word) =>{
 
     const resultElement = document.createElement("p")
     resultElement.setAttribute("id","result")
+    resultElement.setAttribute("class", "result")
     const textResult =  isPalindrome(word) ? `${word} is a Palindrome.` : `${word} is not a Palindrome.`
     resultElement.textContent = textResult;
     checkBox.appendChild(resultElement)
